@@ -36,12 +36,29 @@
         <li><a href="https://scratch.mit.edu/users/darkmaster085/">Scratch Profile</a>
         <li><a href="https://www.linkedin.com/in/marcos-machado-907640176/">LinkedIn Profile</a>
       </ul>
-      Also, enjoy this little thing called a Caesar Cipher.
+      Also, enjoy this little thing called a Caesar Cipher.</p>
       <input id="in">
       <button type="button" onclick="myFunction()">Submit</button>
       <p id="out"></p> 
-      
-      </p>
+      <script>
+       function myFunction() {
+    var inVar, outVar;
+
+    // Input
+    inVar = document.getElementById("in").value;
+    
+    // Processing
+    outVar = "";
+	var position = 0;
+	while (position < 5) {
+		outVar = outVar + String.fromCharCode(inVar.charCodeAt(position) - 5);
+        position = position + 5;
+	}
+
+	// Output
+    document.getElementById("out").innerHTML = outVar;
+}
+      </script>
     <h3>Thanks For Reading</h3>
     <a href="https://mmachado9571.github.io/website/index.html">Back to Main Page</a>
   </body> 
